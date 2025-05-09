@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="demo/css/style.css">
+	<link rel="icon" type="image/svg+xml" href="demo/favicon.svg">
+	<title>Nucleo Web Font</title>
+</head>
+<body>
+	<header>
+		<h1>Nucleo Web Font</h1>
+		<p>Generated using <a href="https://nucleoapp.com">nucleoapp.com</a></p>
+	</header>
+
+	<div id="icons-wrapper">
+		<section>
+			<ul>
+                
+                    <li>
+                        <i class="icon icon-envelope"></i>
+                        <p class="js-classname">icon-envelope</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-lock"></i>
+                        <p class="js-classname">icon-lock</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-hide"></i>
+                        <p class="js-classname">icon-hide</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-view"></i>
+                        <p class="js-classname">icon-view</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-house-6"></i>
+                        <p class="js-classname">icon-house-6</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-credit-card"></i>
+                        <p class="js-classname">icon-credit-card</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-arrow-up-2"></i>
+                        <p class="js-classname">icon-arrow-up-2</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-chevron-left"></i>
+                        <p class="js-classname">icon-chevron-left</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-chevron-right"></i>
+                        <p class="js-classname">icon-chevron-right</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-wallet-2"></i>
+                        <p class="js-classname">icon-wallet-2</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-profile"></i>
+                        <p class="js-classname">icon-profile</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-archive-export"></i>
+                        <p class="js-classname">icon-archive-export</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-archive-download"></i>
+                        <p class="js-classname">icon-archive-download</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-id-badge"></i>
+                        <p class="js-classname">icon-id-badge</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-cogwheel"></i>
+                        <p class="js-classname">icon-cogwheel</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-grid-interface"></i>
+                        <p class="js-classname">icon-grid-interface</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-alarm"></i>
+                        <p class="js-classname">icon-alarm</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-stopwatch"></i>
+                        <p class="js-classname">icon-stopwatch</p>
+												
+                    </li>
+                
+                    <li>
+                        <i class="icon icon-uea16-"></i>
+                        <p class="js-classname">icon-uea16-</p>
+												
+                    </li>
+                
+				<!-- list of icons here with the proper class-->
+			</ul>
+		</section>
+	</div>
+<script>
+    function SelectText(element) {
+	    var doc = document
+	        , text = element
+	        , range, selection;
+	    if (doc.body.createTextRange) {
+	        range = document.body.createTextRange();
+	        range.moveToElementText(text);
+	        range.select();
+	    } else if (window.getSelection) {
+	        selection = window.getSelection();
+	        range = document.createRange();
+	        range.selectNodeContents(text);
+	        selection.removeAllRanges();
+	        selection.addRange(range);
+	    }
+	}
+    window.onload = function() {
+    	var iconsWrapper = document.getElementById('icons-wrapper'),
+    		listItems = iconsWrapper.getElementsByTagName('li');
+			for (var i = 0; i < listItems.length; i++) {
+				listItems[i].onclick  = function fun(event) {
+					var selectedTagName = event.target.tagName.toLowerCase();
+					if( selectedTagName == 'p' || selectedTagName == 'em' ) {
+						SelectText(event.target);
+					} else if( selectedTagName == 'input' ) {
+						event.target.setSelectionRange(0, event.target.value.length);
+					}
+				}
+
+				var nameClass = listItems[i].getElementsByClassName('js-classname'),
+					ligatureEl = listItems[i].getElementsByClassName('js-ligature');
+
+				var beforeContentChar = window.getComputedStyle(listItems[i].getElementsByTagName('i')[0], '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, ""),
+					beforeContent = beforeContentChar.codePointAt(0).toString(16);
+				var beforeContentElement = document.createElement("em");
+				beforeContentElement.textContent = "\\"+beforeContent;
+
+				//create input element to copy/paste chart
+				var charCharac = document.createElement('input');
+				charCharac.setAttribute('type', 'text');
+				charCharac.setAttribute('maxlength', '1');
+				charCharac.setAttribute('readonly', 'true');
+				charCharac.setAttribute('value', beforeContentChar);
+        // insert in DOM
+				nameClass[0].after(charCharac);
+        nameClass[0].after(beforeContentElement);
+
+				// update ligature value
+				if(ligatureEl.length > 0) {
+					ligatureEl[0].innerText = ligatureEl[0].innerText.replace(/-/gu, "_");
+				}
+			}
+    }
+</script>
+</body>
+</html>

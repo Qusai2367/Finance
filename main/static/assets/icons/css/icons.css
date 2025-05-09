@@ -1,0 +1,156 @@
+/*--------------------------------
+
+Nucleo icon font
+Generated using nucleoapp.com
+
+-------------------------------- */
+
+@font-face {
+  font-family: 'Nucleo';
+  src: url('../fonts/Nucleo.eot');
+  src: url('../fonts/Nucleo.eot') format('embedded-opentype'),
+       url('../fonts/Nucleo.woff2') format('woff2'),
+       url('../fonts/Nucleo.woff') format('woff'),
+       url('../fonts/Nucleo.ttf') format('truetype'),
+       url('../fonts/Nucleo.svg') format('svg');
+}
+
+/* base class */
+.icon {
+  display: inline-block;
+  font: normal normal normal 1em/1 'Nucleo';
+  color: inherit;
+  flex-shrink: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* size examples - relative units */
+.icon-sm {
+  font-size: 0.8em;
+}
+
+.icon-lg {
+  font-size: 1.2em;
+}
+
+/* size examples - absolute units */
+.icon-16 {
+  font-size: 16px;
+}
+
+.icon-32 {
+  font-size: 32px;
+}
+
+/* rotate the icon infinitely */
+.icon-is-spinning {
+  animation: icon-spin 1s infinite linear;
+}
+
+@keyframes icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* transform */
+.icon-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.icon-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.icon-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.icon-flip-y {
+  transform: scaleY(-1);
+}
+
+.icon-flip-x {
+  transform: scaleX(-1);
+}
+
+/* icons */
+.icon-envelope::before {
+  content: "\ea02";
+}
+
+.icon-lock::before {
+  content: "\ea03";
+}
+
+.icon-hide::before {
+  content: "\ea04";
+}
+
+.icon-view::before {
+  content: "\ea05";
+}
+
+.icon-house-6::before {
+  content: "\ea06";
+}
+
+.icon-credit-card::before {
+  content: "\ea07";
+}
+
+.icon-arrow-up-2::before {
+  content: "\ea0a";
+}
+
+.icon-chevron-left::before {
+  content: "\ea0b";
+}
+
+.icon-chevron-right::before {
+  content: "\ea0c";
+}
+
+.icon-wallet-2::before {
+  content: "\ea0d";
+}
+
+.icon-profile::before {
+  content: "\ea0e";
+}
+
+.icon-archive-export::before {
+  content: "\ea0f";
+}
+
+.icon-archive-download::before {
+  content: "\ea10";
+}
+
+.icon-id-badge::before {
+  content: "\ea11";
+}
+
+.icon-cogwheel::before {
+  content: "\ea12";
+}
+
+.icon-grid-interface::before {
+  content: "\ea13";
+}
+
+.icon-alarm::before {
+  content: "\ea14";
+}
+
+.icon-stopwatch::before {
+  content: "\ea15";
+}
+
+.icon-uea16-::before {
+  content: "\ea01";
+}

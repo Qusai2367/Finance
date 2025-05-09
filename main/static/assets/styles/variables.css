@@ -1,0 +1,87 @@
+@import url(style.css);
+
+:root {
+    /* الألوان الرئيسية */
+    --main-color: #2969ff;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* ألوان الواجهة */
+    --color2: #344059;
+    --color3: #080b30;
+
+    /* التدرجات الرمادية */
+    --gray1: #f7f7f7;
+    --gray2: #ececef;
+    --gray3: #7f808c;
+    --gray4: #555;
+
+    /* ألوان الحالة */
+    --green: #3a9325;
+    --greenalt: #36b339;
+    --red: #f75555;
+    --red2: #ffe4e4;
+    --main2: #dee7fc;
+
+    /* ألوان إضافية */
+    --history-bar-plus: #8cafff;
+    
+    /* ألوان الخلفية والنص */
+    --view-bg-color: #fff;
+    --text-color: #000;
+
+    /* المسافات */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* نصف قطر الحواف */
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 20px;
+    --border-radius-full: 9999px;
+
+    /* الظلال */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+
+    /* الخطوط */
+    --font-family-main: "mono", sans-serif;
+    --font-family-secondary: "cairo", sans-serif;
+    
+    /* أحجام الخطوط */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+}
+
+
+@font-face {
+    font-family: "lato";
+    src: url(../font/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: "mono";
+    src: url(../Font/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: "cairo";
+    src: url(../font/Cairo-Medium.ttf);
+}
+
+@font-face {
+    font-family: "taj";
+    src: url(../font/Tajawal-Regular.ttf);
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(../font/Poppins-Medium.ttf);
+}

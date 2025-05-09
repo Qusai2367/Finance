@@ -1,0 +1,81 @@
+@import url(style.css);
+
+
+.flex {display: flex;}
+
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.aling-center {
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-reverse-row {flex-direction: row-reverse;}
+
+/* margins */
+
+.gap-10 {gap: 10px;}
+
+.gap-20 {gap: 10px;}
+
+.gap-20 {gap: 10px;}
+
+.gap-20 {gap: 10px;}
+
+.gap-20 {gap: 10px;}
+
+.m-10 {margin: 10px;}
+
+.mb-10 {margin-bottom: 10px;}
+
+.mt-10 {margin-top: 10px;}
+
+.mtb-10 {margin: 10px 0;}
+
+.m-20 {margin: 20px;}
+
+.mb-20 {margin-bottom: 20px;}
+
+.mt-20 {margin-top: 20px;}
+
+.mtb-20 {margin: 20px 0;}
+/* padding */
+
+.p-10 {padding: 10px;}
+
+.p-20 {padding: 20px;}
+
+
+
+/* Bordwe-radioa */
+
+.rounded {
+    border-radius: 50%;
+}
+
+.vertical-line {
+    width: 100%;
+    height: 1px;
+    background: #c8c8c8;
+}
