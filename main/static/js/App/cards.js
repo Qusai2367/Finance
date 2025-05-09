@@ -1,6 +1,6 @@
 import { loadCardHeader } from "../components/cardHeader.js";
 
-import { Nav } from "./components/cardHeader.js"
+
 
 export async function loadCard() {
     const main = document.getElementById('main-content');

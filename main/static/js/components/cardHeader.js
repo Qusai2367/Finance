@@ -1,4 +1,4 @@
-import { handleRouteChange } from "../routes.js"
+// import { handleRouteChange } from "../routes.js"
 export async function loadCardHeader() {
     // Return the header HTML content instead of directly modifying the DOM
 
@@ -23,11 +23,11 @@ export async function loadCardHeader() {
     
 }
 
-export function Nav() {
-    document.getElementById("navigate").addEventListener("click", () => {
-        // window.history.pushState({}, '', path);
-        console.log(4)
-    })
-}
+// export function Nav() {
+//     document.getElementById("navigate").addEventListener("click", () => {
+//         // window.history.pushState({}, '', path);
+//         console.log(4)
+//     })
+// }
 
-requestAnimationFrame(() => Nav())
+// requestAnimationFrame(() => Nav())

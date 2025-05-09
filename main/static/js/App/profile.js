@@ -8,5 +8,3 @@ export async function loadProfile() {
 
 }
 
-import { Nav } from "../components/cardHeader.js"
-requestAnimationFrame(() => Nav())

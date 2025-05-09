@@ -4,8 +4,7 @@ import { loadTransactions } from "./App/transactions.js";
 import { loadWallet } from "./App/wallet.js";
 import { loadProfile } from "./App/profile.js"
 
-// import { addHomeEventListeners } from "./main.js";
-import { Nav } from "./components/cardHeader.js"
+
 const routes = {
     '/': loadHome,
     '/cards': loadCard,
@@ -119,4 +118,4 @@ function loader() {
 //     });
 // }
 
-requestAnimationFrame(() => Nav())
+
