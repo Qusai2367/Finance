@@ -4,7 +4,6 @@ import { loadTransactions } from "./App/transactions.js";
 import { loadWallet } from "./App/wallet.js";
 import { loadProfile } from "./App/profile.js"
 
-
 const routes = {
     '/': loadHome,
     '/cards': loadCard,
@@ -24,7 +23,7 @@ export function initRouter() {
     
 
     // Handle back/forward navigation
-    window.addEventListener('popstate', handleRouteChange);
+    window.addEventListener('popstate', handleRouteChange );
 
    
     // Delegate link clicks with improved event delegation
@@ -35,14 +34,14 @@ export function initRouter() {
             e.preventDefault();
             const href = pageLink.getAttribute('href');
             navigateTo(href);
-            console.log('Navigating to:', href);
+            updateActiveLink();
         }
     });
 }
 
 export function handleRouteChange() {
 
-  
+    main.classList.add("zoomin");
 
     const path = window.location.pathname;
     
@@ -58,21 +57,24 @@ export function handleRouteChange() {
     </div>
     `;
     loader();
-    // Check if the route exists
-    if (routes[path]) {
+    setTimeout(() =>{
+        // Check if the route exists
+        if (routes[path]) {
         // Update document title based on current route
-        updateDocumentTitle(path);
+            updateDocumentTitle(path);
         
         // Load the view without refreshing the page
-        routes[path]().catch(err => {
-            console.error('Error loading view:', err);
-            document.getElementById('main-content').innerHTML = NotFound;
-        });
-    } else {
+            routes[path]().catch(err => {
+                console.error('Error loading view:', err);
+                document.getElementById('main-content').innerHTML = NotFound;
+            });
+        } else {
         // Handle 404 case
-        document.getElementById('main-content').innerHTML = NotFound;
-        updateDocumentTitle(path);
-    }
+            document.getElementById('main-content').innerHTML = NotFound;
+            updateDocumentTitle(path);
+        }
+    } ,200)
+
 }
 
 // Function to update document title based on current route
@@ -92,30 +94,50 @@ function updateDocumentTitle(path) {
 export function navigateTo(path) {
     window.history.pushState({}, '', path);
     handleRouteChange();
+    
 }
 
 function loader() {
     document.getElementById("main-content").innerHTML = `
-    <div class="loader"> 
-        <div class="spinner">
-            <p> Loading...</p>
-        </div>
+    <div class="centerLoad">
+      <div class="circle-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
     `
 }
 
-// function updateActiveLink(path) {
-//     const page = document.querySelectorAll(".page");
-//     console.log(page)
-//     page.forEach(link => {
-//         const href = link.getAttribute("href");
-//         console.log(href)
-//         if (href === path) {
-//             link.classList.add("active");
-//         } else {
-//             link.classList.add("active");
-//         }
-//     });
-// }
+export function updateActiveLink() {
+    
+    const pages = document.querySelectorAll(".nav-list li");
+    const currentPath = window.location.pathname;
+    const main = document.getElementById("main-content");
+    pages.forEach(li => {
+        const anchor = li.querySelector("a");
+        const href = anchor?.getAttribute("href");
+
+        if (href === currentPath) {
+            li.classList.add("active");
+           
+        } else {
+            li.classList.remove("active");
+            main.classList.remove("zoomin");
+        }
+        
+        
+    });
+
+    
+}
 
 
+export function animation() {
+    main.classList.add("zoomin");
+}

@@ -1,16 +1,16 @@
-import { loadCardHeader } from "../components/cardHeader.js";
-
-
+import { loadCardHeader, iniCardHeaderEvent } from "../components/cardHeader.js";
+import { updateActiveLink } from "../routes.js";
 
 export async function loadCard() {
     const main = document.getElementById('main-content');
     const headerContent = await loadCardHeader();
+    
     // Create view
     main.innerHTML = `
 
     <header id="header">
             ${ headerContent }
-    </header>]
+    </header>
 
     <div class="card main-card mtb-20">
 
@@ -74,7 +74,9 @@ export async function loadCard() {
         <button> Create Card </div>
     </div>
     `
-      
+    iniCardHeaderEvent();
+    updateActiveLink();
+    
     
 }
 

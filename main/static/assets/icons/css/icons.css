@@ -151,6 +151,10 @@ Generated using nucleoapp.com
   content: "\ea15";
 }
 
+.icon-zoom::before {
+  content: "\ea17";
+}
+
 .icon-uea16-::before {
   content: "\ea01";
 }

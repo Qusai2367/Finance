@@ -58,13 +58,111 @@ img {width: 70px;}
     color: var(--main-color);
 }
 
+.gray-color-3 { color: var(--gray3);}
+
 .bg-main {background: var(--main-color);}
 
 .clickable {cursor: pointer;}
 
 .viewport {
+    position: relative;
     padding: 20px;
 }
+
+.container {
+    position: relative;
+    top: 70px;
+}
+
+/*=== Loader ===*/
+
+.centerLoad {position: relative;}
+
+.circle-loader {
+    position: absolute;
+    transform: translateY(50%);
+    top: 200%;
+    left: 50%;
+    z-index: 1000;
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);                 
+    -o-transform: translateY(50%);
+}
+
+.circle-loader div {
+    height: 10px;
+    width: 10px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    animation: 0.8s opaque ease-in-out infinite both;
+}
+  
+.circle-loader > div:nth-child(1) {
+    top: -25px;
+    left: 0;
+}
+  
+.circle-loader > div:nth-child(2) {
+    top: -17px;
+    left: 17px;
+    animation-delay: 0.1s;
+}
+  
+.circle-loader > div:nth-child(3) {
+    top: 0;
+    left: 25px;
+    animation-delay: 0.2s;
+}
+  
+.circle-loader > div:nth-child(4) {
+    top: 17px;
+    left: 17px;
+    animation-delay: 0.3s;
+}
+.circle-loader > div:nth-child(5) {
+    top: 25px;
+    left: 0;
+    animation-delay: 0.4s;
+}
+  
+.circle-loader > div:nth-child(6) {
+    top: 17px;
+    left: -17px;
+    animation-delay: 0.5s;
+}
+  
+.circle-loader > div:nth-child(7) {
+    top: 0;
+    left: -25px;
+    animation-delay: 0.6s;
+}
+  
+.circle-loader > div:nth-child(8) {
+    top: -17px;
+    left: -17px;
+    animation-delay: 0.7s;
+}
+
+
+  
+@keyframes opaque {
+    0% {
+      opacity: 0.1;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.1;
+    }
+}
+
+
 
 /* ====================================================================== */
 /* Menu */
@@ -76,6 +174,45 @@ img {width: 70px;}
 .menu {
     position: relative;
 
+}
+
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in forwards;
+    -webkit-animation: fadeIn 0.3s ease-in forwards;
+}
+
+.fade-out {
+    animation: fadeout 0.3s ease-out forwards;
+    -webkit-animation: fadeout 0.3s ease-out forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeout {
+
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(10px);
+    }
+
+    
 }
 
 
@@ -336,4 +473,138 @@ header .notifications span {
 .transaction-amount.amount-clr-whiteblack {
     font-weight: bold;
     color: var(--color3);
+}
+
+
+
+/* Forms Input */
+.email-box {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    background: var(--gray2);
+    border-radius: 20px;
+    padding: 15px 20px;
+    z-index: -1;
+}
+
+
+.input-content {
+    display: block;
+    position: relative;
+    
+}
+
+.input-content::after {
+    content: "";
+    position: absolute;
+    background: var(--text-color);
+    width: 1px;
+    height: 100%;
+    left: -10%;
+    top: 0;
+}
+
+.input-content-no-after {display: block;}
+
+  
+/* Style the form icons */
+.input-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    padding: 10px;
+    min-width: 50px;
+    font-size: 20px;
+    color: var(--color3);
+}
+
+.in-label {
+    margin-left: 10px;
+}
+  
+  /* Style the input fields */
+.input-field {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    background: none;
+    outline: none;
+    
+}
+
+.input-icon-password {
+    position: absolute;
+    right: 20px;
+    font-size: 16px;
+    top: 30px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+/* ================= Transactions ===============*/
+.flex-trsns {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.recent-send {
+    display: flex;
+    flex: 1 0 130px;
+}
+
+.recent-send img {
+    width: 40px;
+    height: 40px;
+}
+
+.info-trans {
+    background: var(--gray2);
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    
+}
+
+.info-trans .name {
+    text-wrap:unset;
+}
+
+.input-trans {position: relative;}
+
+.input-trans .icon-zoom {
+    position: absolute;
+    top: 5px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.contact-container {margin-top: 30px;}
+
+.contact img {
+    width: 50px;
+    height: 50px;
+}
+
+.contact-info  .name {
+    font-size: 20px;
 }

@@ -38,24 +38,4 @@ export function loadNavigation() {
 
 }
 
-// Function to update the active navigation link based on current path
-// function updateActiveNavLink() {
-    
-//     const navLinks = document.querySelectorAll('.nav-list li');
-    
-//     // Remove active class from all links
-//     navLinks.forEach(li => {
-//         li.addEventListener("click", () => {
-//             li.classList.remove('active');
-//         });
-       
-//         const link = li.querySelector('a');
-//         const currentPath = window.location.pathname;
-//         console.log(currentPath)
-//         if (link && link.getAttribute('href') === currentPath) {
-//             li.classList.add('active');
-//         }
-//         // Find the link inside this list item
-        
-//     });
-// }
+
