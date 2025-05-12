@@ -1,9 +1,10 @@
-import { iniCardHeaderEvent, loadCardHeader } from "../components/sendHeader.js";
+import { iniCardHeaderEvent, loadSendHeader } from "../components/sendHeader.js";
 import { updateActiveLink } from "../routes.js";
 
 export async function loadTransactions() {
     const main = document.getElementById('main-content');
-    const headerContent = await loadCardHeader();
+    const headerContent = await loadSendHeader();
+
     // Create view
     main.innerHTML = `
         <div class = "container">
@@ -12,7 +13,7 @@ export async function loadTransactions() {
             </header>
         
 
-            <h4 class="mb-20">Recently</h4>
+            <h3 class="mb-20">Recently</h3>
 
             <div class="flex-trsns">
                 <div class="recent-send mb-20">

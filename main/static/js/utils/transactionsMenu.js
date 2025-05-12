@@ -69,5 +69,32 @@ export async function loadTransactionMenu() {
 
             <div class="transaction-amount amount-clr-red">+$24.5455</div>
         </div>
+
+        <div class="transaction-content bg-color-red flex-between mb-20 clickable">
+            <div class="transactions-icon">
+                <i class="fa-brands fa-paypal"></i>
+            </div>
+
+            <div class="transactions-details">
+                <div class="transaction-type">Disposit by Paypal</div>
+                <div class="info-clainet">Qusai23@gmail.com</div>
+            </div>
+
+            <div class="transaction-amount amount-clr-red">+$24.5455</div>
+        </div>
+
+
+        <div class="transaction-content bg-color-red flex-between mb-20 clickable">
+            <div class="transactions-icon">
+                <i class="fa-brands fa-paypal"></i>
+            </div>
+
+            <div class="transactions-details">
+                <div class="transaction-type">Disposit by Paypal</div>
+                <div class="info-clainet">Qusai23@gmail.com</div>
+            </div>
+
+            <div class="transaction-amount amount-clr-red">+$24.5455</div>
+        </div>
     `
 }

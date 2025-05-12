@@ -155,6 +155,62 @@ Generated using nucleoapp.com
   content: "\ea17";
 }
 
+.icon-money-bill-coin::before {
+  content: "\ea18";
+}
+
+.icon-office::before {
+  content: "\ea19";
+}
+
+.icon-tabs-plus::before {
+  content: "\ea1a";
+}
+
+.icon-shield-check::before {
+  content: "\ea1b";
+}
+
+.icon-file-text::before {
+  content: "\ea1c";
+}
+
+.icon-users-filled::before {
+  content: "\ea1d";
+}
+
+.icon-msg-writing::before {
+  content: "\ea1e";
+}
+
+.icon-arrow-door-out-3::before {
+  content: "\ea1f";
+}
+
+.icon-arrow-door-in::before {
+  content: "\ea20";
+}
+
+.icon-heart::before {
+  content: "\ea21";
+}
+
+.icon-reload::before {
+  content: "\ea22";
+}
+
+.icon-loop::before {
+  content: "\ea23";
+}
+
+.icon-replay::before {
+  content: "\ea24";
+}
+
+.icon-dark-light::before {
+  content: "\ea25";
+}
+
 .icon-uea16-::before {
   content: "\ea01";
 }

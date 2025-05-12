@@ -60,6 +60,31 @@
     --font-size-xl: 1.25rem;
 }
 
+body.dark {
+    --view-bg-color :  #212529;
+    --text-color    :  #fff;
+    --brand-color   :  #2b3035;
+    --gray2         :  #161616;
+    --color3        :  #dedede;
+    --red2          :  #343a40;
+    --main2         :  #2e3135;
+    /* 
+    --wb-color : #212529;
+    --bw-color : #fff;
+    --text-clr :     #dddddd;
+    --back-end: #adb5bd;
+    --front-end: #6c757d;
+    --gw-clr : #d7d7d7;
+    --wb-clr    : #000;
+    --gray2     : #000;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-body-bg: #212529;
+    --bs-secondary-bg: #343a40;
+    --bs-tertiary-bg: #2b3035; */
+}
+
 
 @font-face {
     font-family: "lato";

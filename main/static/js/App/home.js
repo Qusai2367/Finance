@@ -62,10 +62,11 @@ export async function loadHome() {
 
             <div class="transactions-header flex-between mb-20 ">
                 <h1>Last Transaction</h1>
-                <h5 class="main-color clickable">Show More</h5>
+                <h4 class="main-color clickable">Show More</h4>
             </div>
 
             ${ loadTransaction }
+        </div>
 
     `
         
